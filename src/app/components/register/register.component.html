@@ -1,0 +1,174 @@
+<form [formGroup]="registerForm" (ngSubmit)="onsave()" class="register-form">
+  <div class="grid-container">
+    <div class="grid-item">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" />
+      <div
+        *ngIf="
+          registerForm.get('name')?.invalid && registerForm.get('name')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('name')?.hasError('required')"
+          >Name is required.</small
+        >
+        <small *ngIf="registerForm.get('name')?.hasError('pattern')"
+          >Name must contain only letters.</small
+        >
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="fatherName">Father Name</label>
+      <input id="fatherName" type="text" formControlName="fatherName" />
+      <div
+        *ngIf="
+          registerForm.get('fatherName')?.invalid &&
+          registerForm.get('fatherName')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('fatherName')?.hasError('required')"
+          >Father's name is required.</small
+        >
+        <small *ngIf="registerForm.get('fatherName')?.hasError('pattern')"
+          >Father's name must contain only letters.</small
+        >
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="motherName">Mother Name</label>
+      <input id="motherName" type="text" formControlName="motherName" />
+      <div
+        *ngIf="
+          registerForm.get('motherName')?.invalid &&
+          registerForm.get('motherName')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('motherName')?.hasError('required')"
+          >Mother's name is required.</small
+        >
+        <small *ngIf="registerForm.get('motherName')?.hasError('pattern')"
+          >Mother's name must contain only letters.</small
+        >
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="dob">Date of Birth</label>
+      <input id="dob" type="date" formControlName="dateOfBirth" />
+      <div
+        *ngIf="
+          registerForm.get('dateOfBirth')?.invalid &&
+          registerForm.get('dateOfBirth')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('dateOfBirth')?.hasError('required')"
+          >Date of birth is required.</small
+        >
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" formControlName="phone" />
+      <div
+        *ngIf="
+          registerForm.get('phone')?.invalid &&
+          registerForm.get('phone')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('phone')?.hasError('required')"
+          >Phone number is required.</small
+        >
+        <small *ngIf="registerForm.get('phone')?.hasError('pattern')"
+          >Phone number must be exactly 10 digits.</small
+        >
+        <small *ngIf="registerForm.get('phone')?.hasError('pattern')">
+          Phone number must start with 6-9 and be exactly 10 digits long.
+        </small>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+      <div
+        *ngIf="
+          registerForm.get('email')?.invalid &&
+          registerForm.get('email')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('email')?.hasError('required')"
+          >Email is required.</small
+        >
+        <small *ngIf="registerForm.get('email')?.hasError('email')"
+          >Invalid email format.</small
+        >
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="country">Country</label>
+      <input id="country" type="text" formControlName="country" />
+    </div>
+
+    <div class="grid-item">
+      <label for="state">State</label>
+      <input id="state" type="text" formControlName="state" />
+    </div>
+
+    <div class="grid-item">
+      <label for="address">Address</label>
+      <input id="address" type="text" formControlName="address" />
+    </div>
+
+    <div class="grid-item">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" />
+      <div
+        *ngIf="
+          registerForm.get('password')?.invalid &&
+          registerForm.get('password')?.touched
+        "
+      >
+        <small *ngIf="registerForm.get('password')?.hasError('required')"
+          >Password is required.</small
+        >
+        <small *ngIf="registerForm.get('password')?.hasError('minlength')"
+          >Password must be at least 6 characters.</small
+        >
+        <small *ngIf="registerForm.get('password')?.hasError('maxlength')"
+          >Password cannot exceed 15 characters.</small
+        >
+        <small *ngIf="registerForm.get('password')?.hasError('passwordInvalid')"
+          >Password must be alphanumeric, include special characters, and not
+          contain '0'.</small
+        >
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        id="confirmPassword"
+        type="password"
+        formControlName="confirmPassword"
+      />
+      <div
+        *ngIf="
+          registerForm.get('confirmPassword')?.invalid &&
+          registerForm.get('confirmPassword')?.touched
+        "
+      >
+        <small *ngIf="registerForm.hasError('mismatch')"
+          >Passwords must match.</small
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button type="button" (click)="oncancel()">Cancel</button>
+    <button type="submit" (click)="onsave()">Save</button>
+  </div>
+</form>

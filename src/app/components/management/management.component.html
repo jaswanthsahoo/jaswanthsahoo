@@ -1,0 +1,25 @@
+<mat-tab-group>
+  <mat-tab label="User"
+    ><div class="actions">
+      <button mat-raised-button color="primary" (click)="onAddUser()">
+        <mat-icon>person_add</mat-icon> Add User
+      </button>
+
+      <!-- Download Button -->
+      <button mat-raised-button color="accent" (click)="exportToExcel()">
+        <mat-icon>download</mat-icon> Download Excel
+      </button>
+    </div>
+    <!-- Pass dataSourceChange event to management component -->
+    <!-- Table-->
+    <app-table (dataSourceChange)="onDataSourceChange($event)"></app-table>
+  </mat-tab>
+  <mat-tab label="UserTag">
+    <div class="grid-container">
+      <app-header class="header"></app-header>
+      <app-sidebar class="sidebar"></app-sidebar>
+      <app-content class="content"></app-content>
+      <app-footer class="footer"></app-footer>
+    </div>
+  </mat-tab>
+</mat-tab-group>

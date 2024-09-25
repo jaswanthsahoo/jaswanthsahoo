@@ -1,0 +1,47 @@
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto; /* 4 columns */
+  gap: 10px; /* Adds spacing between grid items */
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Light background color for grid items */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/* ---------------------------------------------------- */
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 80px 200px auto 40px; /* 4 columns */
+  grid-template-rows: 80px 200px;
+  gap: 10px; /* Adds spacing between grid items */
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-container2 > div {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Light background color for grid items */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

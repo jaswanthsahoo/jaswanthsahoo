@@ -1,0 +1,90 @@
+.mat-tab-group {
+  background-color: #f9f9f9; /* Light background for the tab group */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px; /* Space below the tab group */
+}
+
+.mat-tab {
+  font-weight: bold; /* Bold text for tab labels */
+}
+
+.actions {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 15px; /* Space below the action buttons */
+  margin-top: 20px; /* Added space above actions to move buttons down */
+  margin-bottom: -54px;
+}
+
+.actions button {
+  margin-right: 10px; /* Space between buttons */
+}
+
+button.mat-raised-button {
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners for buttons */
+}
+
+button.mat-raised-button:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.mat-icon {
+  margin-right: 5px; /* Space between icon and button text */
+}
+
+.mat-tab-label {
+  padding: 10px 20px; /* Padding for tab labels */
+}
+
+.mat-tab-label-active {
+  background-color: #1976d2; /* Active tab background color */
+  color: white; /* Active tab text color */
+  border-radius: 4px; /* Rounded corners for active tab */
+}
+
+.mat-tab-label:not(.mat-tab-label-active):hover {
+  background-color: #e0e0e0; /* Light gray on hover */
+  border-radius: 4px; /* Rounded corners on hover */
+}
+
+/* ---------------------------------------------------------------- */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  height: 100vh; /* Full height layout */
+}
+/* ------------------------------------------- */
+.header {
+  grid-area: header;
+  background-color: #4caf50;
+  padding: 10px;
+  color: white;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: yellow;
+  padding: 10px;
+}
+
+.content {
+  grid-area: content;
+  background-color: orangered;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(255, 128, 0);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

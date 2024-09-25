@@ -1,0 +1,70 @@
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+}
+/* First grid container */
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #f3ec21;
+  padding: 10px;
+  margin-bottom: 20px; /* Adds space between this grid and the next element */
+}
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px; /* Adds gap between grid items */
+  margin-bottom: 20px; /* Adds space between grid containers */
+  margin-left: 200px;
+  background-color: #2196f3;
+  padding: 10px;
+  /* column-gap: 50px; */
+  /* row-gap: 50px; */
+  /* gap: 50px 100px;  */
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* ------------------------------------------------- */
+
+.grid-containerr {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-containerr > div {
+  background-color: #f3ec21;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item3 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/* ------------------------------------------- */
